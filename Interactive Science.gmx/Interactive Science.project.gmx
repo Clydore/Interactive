@@ -10,13 +10,16 @@
     <sprite>sprites\spr_T</sprite>
     <sprite>sprites\spr_G</sprite>
     <sprite>sprites\spr_C</sprite>
+    <sprite>sprites\spr_nitrogen_oxygen</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
+    <object>objects\settings</object>
     <object>objects\obj_A</object>
     <object>objects\obj_T</object>
     <object>objects\obj_G</object>
+    <object>objects\obj_nitrogen_oxygen</object>
     <object>objects\obj_C</object>
   </objects>
   <rooms name="rooms">
