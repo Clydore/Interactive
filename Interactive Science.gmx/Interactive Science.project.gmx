@@ -12,6 +12,7 @@
     <sprite>sprites\spr_C</sprite>
     <sprite>sprites\spr_nitrogen_oxygen</sprite>
     <sprite>sprites\spr_cursor</sprite>
+    <sprite>sprites\spr_bank</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -24,6 +25,7 @@
     <object>objects\obj_leading_1</object>
     <object>objects\obj_leading_2</object>
     <object>objects\obj_cursor</object>
+    <object>objects\obj_bank</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

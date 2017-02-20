@@ -3,7 +3,7 @@
   <spriteName>spr_A</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-150</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -60,12 +60,12 @@ if (mouse_check_button_pressed(mb_left)) {
 if (mouse_check_button_released(mb_left)) {
     used = false;
     if (place_meeting(x,y,obj_leading_1)) {
-        x = 256;
-        y = 192;
+        x = obj_leading_1.x+150;
+        y = obj_leading_1.y+50;
     }
     else {
-        x = 60;
-        y = 60;   
+        x = obj_bank.x+100;
+        y = obj_bank.y+100;   
     }
 }
 if (used = false) {
