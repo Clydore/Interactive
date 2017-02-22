@@ -28,7 +28,7 @@
             <string>used = false;
 xx = 0;
 yy = 0;
-x = obj_bank.x+100;
+x = obj_bank.x-20;
 y = obj_bank.y+340;
 </string>
           </argument>
@@ -60,13 +60,22 @@ if (mouse_check_button_pressed(mb_left)) {
 }
 if (mouse_check_button_released(mb_left)) {
     used = false;
-    if (place_meeting(x,y,obj_leading_2)) {
-        x = obj_leading_2.x-100;
-        y = obj_leading_2.y-40;
+    if (place_meeting(x,y,obj_lagging)) {
+        var near = instance_nearest(x,y,obj_lagging);
+        x = near.x;
+        y = near.y;
+        image_xscale = 1;
+    }
+    else if (place_meeting(x,y,obj_leading)) {
+        var lnear = instance_nearest(x,y,obj_leading);
+        x = lnear.x
+        y = lnear.y
+        image_xscale = -1;
     }
     else {
-        x = obj_bank.x+100;
+        x = obj_bank.x-20;
         y = obj_bank.y+340;
+        image_xscale = 1;
     }
 }
 if (used = false) {

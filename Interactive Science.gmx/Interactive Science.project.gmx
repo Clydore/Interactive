@@ -9,10 +9,12 @@
     <sprite>sprites\spr_A</sprite>
     <sprite>sprites\spr_T</sprite>
     <sprite>sprites\spr_G</sprite>
-    <sprite>sprites\spr_C</sprite>
-    <sprite>sprites\spr_nitrogen_oxygen</sprite>
+    <sprite>sprites\sprite7</sprite>
+    <sprite>sprites\spr_leading</sprite>
+    <sprite>sprites\spr_lagging</sprite>
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_bank</sprite>
+    <sprite>sprites\words</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -22,8 +24,12 @@
     <object>objects\obj_T</object>
     <object>objects\obj_G</object>
     <object>objects\obj_C</object>
-    <object>objects\obj_leading_1</object>
-    <object>objects\obj_leading_2</object>
+    <objects name="leading">
+      <object>objects\obj_leading</object>
+    </objects>
+    <objects name="lagging">
+      <object>objects\obj_lagging</object>
+    </objects>
     <object>objects\obj_cursor</object>
     <object>objects\obj_bank</object>
   </objects>

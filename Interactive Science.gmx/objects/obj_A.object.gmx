@@ -28,8 +28,9 @@
             <string>used = false;
 xx = 0;
 yy = 0;
-x = obj_bank.x+100;
-y = obj_bank.y+100;  
+x = obj_bank.x-20;
+y = obj_bank.y+100;
+
 </string>
           </argument>
         </arguments>
@@ -54,19 +55,29 @@ y = obj_bank.y+100;
             <kind>1</kind>
             <string>if (place_meeting(x,y,obj_cursor)) {
 if (mouse_check_button_pressed(mb_left)) {
+    global.A_on = false;
     used = true;
     xx = x - mouse_x;
     yy = y - mouse_y;
 }
 if (mouse_check_button_released(mb_left)) {
     used = false;
-    if (place_meeting(x,y,obj_leading_1)) {
-        x = obj_leading_1.x+150;
-        y = obj_leading_1.y+50;
+    if (place_meeting(x,y,obj_lagging)) {
+        var near = instance_nearest(x,y,obj_lagging);
+        x = near.x;
+        y = near.y;
+        image_xscale = 1;
+    }
+    else if (place_meeting(x,y,obj_leading)) {
+        var lnear = instance_nearest(x,y,obj_leading);
+        x = lnear.x
+        y = lnear.y
+        image_xscale = -1;
     }
     else {
-        x = obj_bank.x+100;
-        y = obj_bank.y+100;   
+        x = obj_bank.x-20;
+        y = obj_bank.y+100;
+        image_xscale = 1;
     }
 }
 if (used = false) {
