@@ -18,6 +18,10 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\fnt_hover</font>
+    <font>fonts\fnt_main</font>
+  </fonts>
   <objects name="objects">
     <object>objects\settings</object>
     <object>objects\obj_A</object>

@@ -29,7 +29,7 @@
 xx = 0;
 yy = 0;
 x = obj_bank.x-20;
-y = obj_bank.y+100;
+y = obj_bank.y+50;
 
 </string>
           </argument>
@@ -76,7 +76,7 @@ if (mouse_check_button_released(mb_left)) {
     }
     else {
         x = obj_bank.x-20;
-        y = obj_bank.y+100;
+        y = obj_bank.y+50;
         image_xscale = 1;
     }
 }
