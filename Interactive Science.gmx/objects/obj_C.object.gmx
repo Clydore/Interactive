@@ -28,7 +28,8 @@
             <string>used = false;
 xx = 0;
 yy = 0;
-
+x = obj_bank.x+100;
+y = obj_bank.y+440;
 </string>
           </argument>
         </arguments>
@@ -60,12 +61,12 @@ if (mouse_check_button_pressed(mb_left)) {
 if (mouse_check_button_released(mb_left)) {
     used = false;
     if (place_meeting(x,y,obj_leading_2)) {
-        x = 448;
-        y = 192;
+        x = obj_leading_2.x-100;
+        y = obj_leading_2.y-40;
     }
     else {
-        x = 120;
-        y = 60;
+        x = obj_bank.x+100;
+        y = obj_bank.y+440;
     }
 }
 if (used = false) {

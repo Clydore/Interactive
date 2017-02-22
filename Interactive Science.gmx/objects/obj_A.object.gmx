@@ -28,7 +28,8 @@
             <string>used = false;
 xx = 0;
 yy = 0;
-
+x = obj_bank.x+100;
+y = obj_bank.y+100;  
 </string>
           </argument>
         </arguments>
