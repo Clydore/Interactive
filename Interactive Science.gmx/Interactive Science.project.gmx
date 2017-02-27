@@ -9,15 +9,20 @@
     <sprite>sprites\spr_A</sprite>
     <sprite>sprites\spr_T</sprite>
     <sprite>sprites\spr_G</sprite>
-    <sprite>sprites\sprite7</sprite>
+    <sprite>sprites\spr_C</sprite>
     <sprite>sprites\spr_leading</sprite>
     <sprite>sprites\spr_lagging</sprite>
     <sprite>sprites\spr_cursor</sprite>
+    <sprite>sprites\sprite9</sprite>
+    <sprite>sprites\sprite10</sprite>
     <sprite>sprites\spr_bank</sprite>
     <sprite>sprites\words</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_text.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_hover</font>
     <font>fonts\fnt_main</font>
@@ -28,6 +33,8 @@
     <object>objects\obj_T</object>
     <object>objects\obj_G</object>
     <object>objects\obj_C</object>
+    <object>objects\obj_real_test</object>
+    <object>objects\obj_tester</object>
     <objects name="leading">
       <object>objects\obj_leading</object>
     </objects>
@@ -36,6 +43,8 @@
     </objects>
     <object>objects\obj_cursor</object>
     <object>objects\obj_bank</object>
+    <object>objects\obj_text</object>
+    <object>objects\obj_text_spawnpoint</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>

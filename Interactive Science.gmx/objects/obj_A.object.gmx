@@ -29,7 +29,7 @@
 xx = 0;
 yy = 0;
 x = obj_bank.x-20;
-y = obj_bank.y+50;
+y = obj_bank.y+100;
 
 </string>
           </argument>
@@ -70,14 +70,12 @@ if (mouse_check_button_released(mb_left)) {
     }
     else if (place_meeting(x,y,obj_leading)) {
         var lnear = instance_nearest(x,y,obj_leading);
-        x = lnear.x
-        y = lnear.y
+        x = lnear.x;
+        y = lnear.y;
         image_xscale = -1;
     }
     else {
-        x = obj_bank.x-20;
-        y = obj_bank.y+50;
-        image_xscale = 1;
+        instance_destroy();
     }
 }
 if (used = false) {
