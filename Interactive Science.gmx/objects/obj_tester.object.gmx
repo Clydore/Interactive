@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>image_index = 0;
 image_speed = 0;
+global.AG = true;
 </string>
           </argument>
         </arguments>
@@ -49,39 +50,30 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// T
-if (!place_meeting(x,y,obj_A)) {
-    var A = false;
-}
-if (place_meeting(x,y,obj_A)) {
-    var A = true;
-}
-// T
-if (!place_meeting(x,y,obj_T)) {
-    var T = false;
-}
-if (place_meeting(x,y,obj_T)) {
-    var T = false;
-}
-// G
-if (!place_meeting(x,y,obj_G)) {
-    var G = false;
-}
-if (place_meeting(x,y,obj_G)) {
-    var G = true;
-}
-// C
-if (!place_meeting(x,y,obj_C)) {
-    var C = false;
-}
-if (place_meeting(x,y,obj_C)) {
-    var C = true;
-}
-//  STUFF
+            <string>//  STUFF
 // A &amp; T
-if (G = true &amp;&amp; T = true) {
-    scr_text("There is a mutation",0.5,obj_text_spawnpoint.x,obj_text_spawnpoint.y);
+if (place_meeting(x,y,obj_G) &amp;&amp; (place_meeting(x,y,obj_T)) &amp;&amp; (global.AG == true)) {
+    scr_text("There is a mutation",2,x,y-40);
+    global.AG = false;
 }
+if (place_meeting(x,y,obj_G) &amp;&amp; (place_meeting(x,y,obj_A))) {
+    scr_text("There is a mutation",0.5,768,576);
+}
+if (place_meeting(x,y,obj_C) &amp;&amp; (place_meeting(x,y,obj_A))) {
+    scr_text("There is a mutation",0.5,768,576);
+}
+if (place_meeting(x,y,obj_C) &amp;&amp; (place_meeting(x,y,obj_T))) {
+    scr_text("There is a mutation",0.5,768,576);
+}
+
+
+if (place_meeting(x,y,obj_G) &amp;&amp; (place_meeting(x,y,obj_C))) {
+    scr_text("",0,0,0);
+}
+if (place_meeting(x,y,obj_A) &amp;&amp; (place_meeting(x,y,obj_T))) {
+    scr_text("",0,0,0);
+}
+
 </string>
           </argument>
         </arguments>
