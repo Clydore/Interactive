@@ -27,7 +27,10 @@
             <kind>1</kind>
             <string>image_index = 0;
 image_speed = 0;
-global.AG = true;
+global.GT = true;
+global.GA = true;
+global.CA = true;
+global.CT = true;
 </string>
           </argument>
         </arguments>
@@ -52,28 +55,36 @@ global.AG = true;
             <kind>1</kind>
             <string>//  STUFF
 // A &amp; T
-if (place_meeting(x,y,obj_G) &amp;&amp; (place_meeting(x,y,obj_T)) &amp;&amp; (global.AG == true)) {
+if (mouse_check_button_released(mb_left)) {
+if (place_meeting(x,y,obj_G) &amp;&amp; (place_meeting(x,y,obj_T)) &amp;&amp; (global.GT == true)) {
     scr_text("There is a mutation",2,x,y-40);
-    global.AG = false;
+    global.GT = false;
 }
-if (place_meeting(x,y,obj_G) &amp;&amp; (place_meeting(x,y,obj_A))) {
-    scr_text("There is a mutation",0.5,768,576);
+if (place_meeting(x,y,obj_G) &amp;&amp; (place_meeting(x,y,obj_A)) &amp;&amp; (global.GA == true))  {
+    scr_text("There is a mutation",0.5,x,y-40);
+    global.GA = false;
 }
-if (place_meeting(x,y,obj_C) &amp;&amp; (place_meeting(x,y,obj_A))) {
-    scr_text("There is a mutation",0.5,768,576);
+if (place_meeting(x,y,obj_C) &amp;&amp; (place_meeting(x,y,obj_A)) &amp;&amp; (global.CA == true)) {
+    scr_text("There is a mutation",0.5,x,y-40);
+    global.CA = false;
 }
-if (place_meeting(x,y,obj_C) &amp;&amp; (place_meeting(x,y,obj_T))) {
-    scr_text("There is a mutation",0.5,768,576);
+if (place_meeting(x,y,obj_C) &amp;&amp; (place_meeting(x,y,obj_T)) &amp;&amp; (global.CT == true))  {
+    scr_text("There is a mutation",0.5,x,y-40);
+    global.CT = false;
 }
 
 
 if (place_meeting(x,y,obj_G) &amp;&amp; (place_meeting(x,y,obj_C))) {
-    scr_text("",0,0,0);
+    image_index = 2;
 }
+    //else image_index = 0;
 if (place_meeting(x,y,obj_A) &amp;&amp; (place_meeting(x,y,obj_T))) {
-    scr_text("",0,0,0);
+    image_index = 1;
 }
+    //else image_index = 0;
 
+
+}
 </string>
           </argument>
         </arguments>
